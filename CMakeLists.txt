@@ -3,7 +3,7 @@ project(Lab4OIPZ)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(Lab4OIPZ main.cpp)
+add_executable(Git-Lab main.cpp)
 
 include(FetchContent)
 FetchContent_Declare(
