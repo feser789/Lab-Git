@@ -56,7 +56,7 @@ int main() {
     int inputchoise;
 
     try {
-        cout << "select input: (1 - console, 2 - file input)\n";
+        cout << "Select input: (1 - Console | 2 - File input)\n";
         cin >> inputchoise;
 
         if (inputchoise == 2) {
@@ -64,14 +64,14 @@ int main() {
                 throw "cannot read file!";
             }
         }else {
-            cout << "Input Start(a), End(b), Step size(h), n (separated by space): \n";
+            cout << "Input Start(a), End(b), Step size(h), n(separated by space): \n";
             cin >> a >> b >> h >> n;
             checkValidInput(cin);
         }
         checkValidParams(a,b,h,n);
 
         char choise;
-        cout << "Save result to file?(y/n): \n";
+        cout << "save result to file?(y/n): \n";
         cin >> choise;
 
         ofstream fout;
@@ -94,7 +94,7 @@ int main() {
 
         if (save) {
             fout.close();
-            cout << "Result saved to file.txt\n";
+            cout << "result saved to file.txt\n";
         }
     }catch (const char *ex) {
         cout << "Error: " << ex;
