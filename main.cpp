@@ -61,7 +61,7 @@ int main() {
 
         if (inputchoise == 2) {
             if (!readFromFile("input.txt",a,b,h,n)) {
-                throw "cannot read file";
+                throw "cannot read file!";
             }
         }else {
             cout << "Input Start(a), End(b), Step size(h), n (separated by space): \n";
@@ -79,7 +79,7 @@ int main() {
         if (save) {
             fout.open("file.txt");
             if (!fout) {
-                cout << "Error: failed to open file!\n";
+                cout << "Error: Failed to open file!\n";
                 save = false;
             }
         }
