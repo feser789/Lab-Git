@@ -19,11 +19,11 @@ TEST(Calc,test9) {EXPECT_NEAR(1.0,calc(-1,5), 1e-9);}
 TEST(Calc,test10) {EXPECT_NEAR(1.0,calc(-0.5,0), 1e-9);}
 TEST(Calc,test11) {EXPECT_NEAR(1.0,calc(-10,3), 1e-9);}
 
-TEST(IsValid,test1) {EXPECT_TRUE(isValid(0,10,1,5));}
+TEST(IsValid,test1) {EXPECT_TRUE(isValid(-89,67,8.9,9));}
 TEST(IsValid,test2) {EXPECT_TRUE(isValid(3,3,1,5));}
 TEST(IsValid,test3) {EXPECT_TRUE(isValid(0,10,1,0));}
 TEST(IsValid,test4) {EXPECT_FALSE(isValid(10,0,1,5));}
-TEST(IsValid,test5) {EXPECT_FALSE(isValid(0,10,0,5));}
+TEST(IsValid,test5) {EXPECT_FALSE(isValid(-78,95,9,7));}
 TEST(IsValid,test6) {EXPECT_FALSE(isValid(0,10,-1,5));}
 TEST(IsValid,test7) {EXPECT_FALSE(isValid(0,10,1,-1));}
 
@@ -46,7 +46,7 @@ TEST(CheckValidInput,test1) {
     EXPECT_NO_THROW(checkValidInput(in));
 }
 TEST(CheckValidInput,2) {
-    std::istringstream in("qwe");
+    std::istringstream in("ewq");
     int n;
     in >> n;
     EXPECT_THROW(checkValidInput(in),const char*);
